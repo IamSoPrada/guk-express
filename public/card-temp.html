@@ -1,0 +1,44 @@
+<div class="card__wrapper">
+    <div class="card__preview">
+        <div class="card__code"><span class="card__code-text">Код: </span><span class="card__code-number">
+                {%CODE%}</span>
+        </div>
+        <div class="card__img"> <img src={%PRIMARYIMAGEURL%} alt="" srcset="" /></div>
+    </div>
+    <div class="card__descr">
+        <div><a class="card__title" href="#">{%TITLE%}</a></div><button class="accordion">Описание <i id="arrow__down"
+                class="fas fa-angle-down"></i> <i id="arrow__up" class="fas fa-angle-up"></i></button>
+        <div class="card__details">
+            <div class="card__descr__text">
+                <p>{%DESCRIPTION%}</p>
+            </div>
+            <div class="card__links">Могут понадобиться: <a class="card__link" href="#">{%ASSOCPRODUCTS%}</a></div>
+        </div>
+    </div>
+    <div class="card__price">
+        <div class="card__units">
+            <p class="card__unit__text">Цена за: </p>
+
+            <p class="card__unit__tab1"> {%UNIT%} </p>
+
+            <p class="card__unit__tab2"> {%UNITALT%} </p>
+        </div>
+        <p class="card__unit__price"> {%PRICERETAIL%} Р</p>
+        <div class="card__price-details">
+            <p class="card__club">По карте клуба:
+            <p class="card__club-price"> {%PRICEGOLD%} <span class="card__club-price rouble">Р</span></p>
+            </p>
+            <p class="card__bonus">За баллы: <span class="card__bonus-price"> {%PRICEGOLDALT%}</span></p>
+        </div>
+        <div class="card__count">
+            <div class="card__counter">
+                <input class="card__counter-input" pattern="^[0–9]$" step="1" min="0" type="text" lang="en"
+                    inputmode="numeric" name="default" theme="box" value="1" />
+                <div><i class="far fa-plus-square  card__counter-increase"></i>
+                    <i class="far fa-minus-square card__counter-decrease"></i>
+                </div>
+            </div>
+        </div>
+        <div class="card__buy"><a href="#" data-product-id="{%CODE%}">В КОРЗИНУ</a></div>
+    </div>
+</div>

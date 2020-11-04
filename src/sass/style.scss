@@ -1,0 +1,170 @@
+//FONTS 
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300&display=swap');
+
+//PAGES
+
+@import "./blocks/header";
+
+@import "./index.scss";
+
+@import "./blocks/footer";
+
+
+//VARIABLES
+
+
+
+
+
+//UTILS
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+.content__container {
+    max-width: 1120px;
+    margin: 0 auto;
+}
+
+body.lock {
+    overflow: hidden;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+//MEDIA
+
+@media(max-width: 1025px){
+    .header__logo {
+        margin-right: auto;
+    }
+    .header__navbar {
+        position: fixed;
+        top: 0;
+        left: -100%; // задаем первоначальное расположение меню за экраном в левой части
+        width: 100%;
+        height: 100%;
+        background-color: #e5b831;
+        overflow: hidden;
+        transition: all 0.3s ease 0s;
+    }
+
+    .header__navbar.active {
+        left: 0;
+        z-index: 99; // обычное положение 
+    }
+    .header__list{
+        font-size: 2em;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    .header__list li {
+        margin: 20px;
+    }
+    .header .header__link {
+        margin: 20px;
+    }
+
+
+    // BURGER MENU
+
+    .header__burger {
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 20px;
+        margin-right: 15px;
+        z-index: 100;
+        padding-right: 30px;;
+    }
+
+    .header__burger:before, .header__burger:after {
+        content: "";
+        background-color: rgb(0, 0, 0);
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        transition: all 0.3s ease 0s;
+    }
+
+    .header__burger:after {
+        bottom: 0;
+    }
+
+    .header__burger span {
+        background-color: rgb(0, 0, 0);
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        top: 9px;
+        transition: all 0.3s ease 0s;
+    }
+    .header__burger.active:before {
+        transform: rotate(45deg);
+        top: 9px;
+        background-color: rgb(0, 0, 0);
+    }
+    .header__burger.active::after {
+        transform: rotate(-45deg);
+        bottom: 9px;
+        background-color: rgb(0, 0, 0);
+    }
+    .header__burger.active span {
+        transform: scale(0);
+        background-color: rgb(0, 0, 0);
+    }
+}
+
+@media(max-width: 769px){
+    .header__logo {
+        margin-left: auto;
+    }
+    .card__wrapper{
+        flex-direction: column;
+    }
+    .header__btn.phone{
+        display: none;
+    }
+    .header__phone-icon{
+        display: block;
+        color:#fff;
+    }
+    .card__title{
+        font-size: 1em;
+    }
+    .card__details{
+        display: none;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-out;
+    }
+    .accordion {
+        display: block;
+    }
+    .card__details.active {
+        display: block;
+    }
+    .card__price {
+        margin-top: 1em;
+    }
+}
+@media(max-width: 480px){
+
+}
+
+@media(max-width: 281px){
+
+}
+
+
+

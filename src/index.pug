@@ -1,0 +1,51 @@
+extends ./_layouts/_layouts
+
+block content
+    section.cards
+        .content__container
+            .wrapper
+                .cards__panel
+                    form.search
+                        input(placeholder="Поиск по категории" onfocus="this.placeholder = ''"
+                            onblur="this.placeholder = 'Поиск по категории'").cards__search
+                        button.cards__search-btn Найти
+                h1.cards__title Лампочки
+                .cards__container
+                    .card__wrapper
+                        .card__preview
+                            .card__code
+                                span.card__code-text Код:
+                                span.card__code-number 12345678
+                            .card__img    
+                                img(src="//cs.petrovich.ru/images/4406685/original-160x182-fit.jpg", alt="", srcset="")
+                        .card__descr
+                            div
+                                a(href="#").card__title Лампочка красивая очень очень
+                            <button class="accordion">Описание <i id="arrow__down" class="fas fa-angle-down"></i> <i id="arrow__up" class="fas fa-angle-up"></i></button>
+                            .card__details
+                                .card__descr__text 
+                                    p Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium quidem laboriosam fugit omnis sunt voluptatum harum eveniet? Modi, quibusdam eius. Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit eaque vero nam impedit perspiciatis ipsum rerum, a mollitia dignissimos natus.
+                                .card__links Могут понадобиться: 
+                                    a(href="#").card__link Провода медные
+                                    a(href="#").card__link Запасные цоколи
+                                    a(href="#").card__link Шурупы коричневые
+                                    a(href="#").card__link Ручки дверные
+                        .card__price
+                            .card__units
+                                p.card__unit__text Цена за 
+                                p.card__unit__tab шт
+                            .card__price-details
+                                p.card__club По карте клуба: 
+                                    p.card__club-price 11
+                                        span.card__club-price.rouble Р
+                                p.card__bonus За баллы: 
+                                    span.card__bonus-price 2.50
+                            .card__count
+                                .card__counter
+                                    input(pattern="^[0–9]$" step="1" min="0" class="card__counter-input" type="text" lang="en" inputmode="numeric" name="default" data-test="product-counter" theme="box" value="1")
+                                    div
+                                        <i class="far fa-plus-square  card__counter-increase"></i>
+                                        <i class="far fa-minus-square card__counter-decrease"></i>
+                            .card__buy
+                                a(href="#" data-product-id="#") В КОРЗИНУ
+                                    

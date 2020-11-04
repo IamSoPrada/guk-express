@@ -1,0 +1,67 @@
+.header {
+    display: flex;
+    width: 100%;
+    height: 64px;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+/*     background: transparent; */
+    top: 0;
+    padding: 25px;
+    background-color: #ffcc33;
+    box-shadow: 0 3px 3px rgba(68,92,130,.14), 0 3px 4px rgba(68,92,130,.12), 0 1px 8px rgba(68,92,130,.2);
+}
+.header__logo{
+    display: inline-flex;
+    margin-right: 2em;
+}
+.header__logo-container{
+    max-width: 140px;
+    min-width: 140px;
+    height: 34px;
+}
+
+.header__navbar {
+    margin: 0 auto;
+}
+.header__list {
+    display: flex;
+    justify-content: space-evenly;
+}
+.header__link {
+    margin-right: 2em;
+    color: rgb(255, 255, 255);
+    white-space: nowrap;
+}
+
+.header__btns {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header__btn {
+    padding: 9px 25px;
+}
+.header__btn span {
+    font-size: small;
+}
+.chat {
+    background: transparent;
+    color: rgb(0, 0, 0);
+    font-size: 1.5em;
+}
+.phone{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background: transparent;
+    color: rgb(0, 0, 0);
+    transition: 0.3s all ease;
+    white-space: nowrap;
+}
+.header__phone-icon{
+    display: none;
+    font-size: 1.5em;
+    color: black;
+}

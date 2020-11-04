@@ -5,7 +5,7 @@ const path = require('path');
 
 
 const host = '127.0.0.1'
-const port = 8000
+const port = 7000
 
 const tempPage = fs.readFileSync(`${__dirname}/public/index.html`, 'utf-8') 
 
